@@ -1,8 +1,8 @@
 import { Router } from "express";
 
 const router = Router();
-router.get("/", (req, res, next) => {
-  res.send("<h1>Hello World!</h1>");
+router.route("/").get((req, res, next) => {
+  res.status(200).sendFile("index.html", { root: "./views" });
 });
 
 export default router;
