@@ -1,8 +1,7 @@
 import { Router } from "express";
+import { getIndex } from "../controllers/index.controller.js";
 
 const router = Router();
-router.route("/").get((req, res, next) => {
-  res.status(200).sendFile("index.html", { root: "./views" });
-});
+router.route("/").get(getIndex);
 
 export default router;

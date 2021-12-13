@@ -1,4 +1,5 @@
 import express from "express";
+import { get404 } from "./controllers/error.controller.js";
 import adminRoutes from "./routes/admin.routes.js";
 import indexRoutes from "./routes/index.routes.js";
 
@@ -11,9 +12,7 @@ app.use(express.static("public", { root: "../public/css" }));
 
 app.use(adminRoutes);
 app.use("/", indexRoutes);
-app.use((req, res, next) => {
-  res.status(404).send("<h1>Page not found!</h1>");
-});
+app.use(get404);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
