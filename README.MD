@@ -18,7 +18,7 @@
 
 ## Metodo Put
 
-- Update by Id "Cataleya" to "Matias"
+- Update by Id "Kuruma" to "Razer"
 
 ![Screenshot](assets/postman4.png)
 
@@ -27,3 +27,4 @@
 - Delete by Id
 
 ![Screenshot](assets/postman5.png)
+![Screenshot](assets/postman6.png)
